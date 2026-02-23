@@ -1,0 +1,17 @@
+@use "../../Styles/vars" as *;
+@use "../../Styles/mixins" as *;
+
+.slp {
+  min-height: 100vh;
+  padding: 26px;
+  background: $bg-dark;
+
+  @include center;
+
+  &__card {
+    width: min(980px, 95vw);
+    border-radius: $radius;
+    box-shadow: $card-shadow;
+    background: transparent;
+  }
+}

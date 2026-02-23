@@ -1,0 +1,64 @@
+@use "../../Styles/vars" as *;
+@use "../../Styles/mixins" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 56px;
+  padding: 0 16px;
+
+  color: #fff;
+  background: linear-gradient(90deg, $blue-1 0%, $blue-2 60%, $blue-3 100%);
+  border-radius: $radius-sm $radius-sm 0 0;
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.95;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__login {
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  &__avatar {
+    @include button-reset;
+
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.18);
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.26);
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background: conic-gradient(
+                    from 90deg,
+                    #d42b2b,
+                    #2b6ad4,
+                    #2bd4a6,
+                    #d4c72b,
+                    #d42b2b
+    );
+  }
+}
