@@ -1,2 +1,3 @@
 ﻿*.idea
 web-interface/verify
+web-interface/node_modules
