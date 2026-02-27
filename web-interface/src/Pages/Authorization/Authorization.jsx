@@ -7,15 +7,14 @@ function Authorization() {
     const [password, setPassword] = useState("")
     const [remember, setRemember] = useState(false)
     return (
-        <div className="auth">
-            <form className="auth__card">
+        <div className="base">
+            <form className="base__card">
+                <h1 className="base__header">Войти в сеть ФСПО</h1>
 
-                <h1 className="auth__header">Войти в сеть ФСПО</h1>
-
-                <label className="auth__label">
+                <label className="base__label">
                     Логин
                     <input
-                        className="auth__input"
+                        className="base__input"
                         type="text"
                         value={login}
                         onChange={(e) => setLogin(e.target.value)}
@@ -23,10 +22,10 @@ function Authorization() {
                     />
                 </label>
 
-                <label className="auth__label">
+                <label className="base__label">
                     Пароль
                     <input
-                        className="auth__input"
+                        className="base__input"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -34,7 +33,7 @@ function Authorization() {
                     />
                 </label>
 
-                <label className="auth__remember">
+                <label className="base__remember">
                     <input
                         type="checkbox"
                         checked={remember}
@@ -43,7 +42,7 @@ function Authorization() {
                     <span>Запомнить меня</span>
                 </label>
 
-                <button className="auth__button">
+                <button className="base__button">
                     Авторизация
                 </button>
 

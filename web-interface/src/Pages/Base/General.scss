@@ -1,0 +1,86 @@
+@use "../../Styles/basecard.scss";
+
+/* Правим карточку под макет */
+.general.base__card {
+  background: #ffffff;      /* белая как на картинке */
+  border: 1px solid #243244;
+  border-radius: 16px;
+  overflow: visible;        /* чтобы нижние кнопки могли “вылезти” */
+  height: auto;             /* не фиксируй высоту, иначе будет ломать */
+  padding-bottom: 38px;     /* место под “вылезающие” кнопки */
+}
+
+/* Кнопка “Открыть папку” */
+.general__open {
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin: 18px 0 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #005aaa;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.general__open:hover { background: #003f76; }
+.general__open:active { background: #001629; }
+
+/* 2 колонки: кнопки слева, линии справа */
+.general__grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 22px;
+  row-gap: 18px;
+  padding: 0 6px;
+}
+
+.general__labels,
+.general__values {
+  display: grid;
+  row-gap: 18px;
+}
+
+.general__label {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #2f7ad1;
+  background: #ffffff;
+  color: #2f2f2f;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.general__line {
+  height: 46px;
+  border-bottom: 2px solid #7a7a7a;
+}
+
+/* Нижние кнопки “вылезают” за карточку */
+.general__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 0 18px;
+
+  margin-top: 22px;
+  margin-bottom: 0px; /* вытаскиваем кнопки вниз за границу карточки */
+}
+
+.general__actionBtn {
+  height: auto;
+  border: 0;
+  border-radius: 12px;
+  background: #005aaa;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.general__actionBtn:hover { background: #003f76; }
+.general__actionBtn:active { background: #001629; }
