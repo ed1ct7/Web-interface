@@ -11,25 +11,33 @@ function General() {
 
                 <div className="general">
                     <div className="general__grid">
+
                         <div className="general__label">Имя</div>
                         <div>
                             <span className="general__value">Антон Савельев</span>
+                            <div className="general__line" />
                         </div>
 
                         <div className="general__label">Почта</div>
                         <div>
-                          <span className="general__value"> thenorthwizards@gmail.com</span>
+                          <span className="general__value">
+                            thenorthwizards@gmail.com
+                          </span>
+                            <div className="general__line" />
                         </div>
 
                         <div className="general__label">Пароль</div>
                         <div>
                             <span className="general__value">Password222</span>
+                            <div className="general__line" />
                         </div>
 
                         <div className="general__label">Группа</div>
                         <div>
                             <span className="general__value">C326</span>
+                            <div className="general__line" />
                         </div>
+
                     </div>
 
                     <div className="general__actions">
