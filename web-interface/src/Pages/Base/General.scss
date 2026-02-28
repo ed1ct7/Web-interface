@@ -9,8 +9,10 @@ $highlightcolor: #ffffff;
   display: grid;
   grid-template-columns: $leftWidth 1fr;
   grid-auto-rows: $rowH;
+
   row-gap: 5px;
-  column-gap: 22px;
+  column-gap: 12px;
+
   margin: 16px 8px 0 8px;
 }
 
@@ -23,13 +25,15 @@ $highlightcolor: #ffffff;
   font-size: 16px;
   color: #2f2f2f;
 
+  background: $highlightcolor;
+
   border-left: $border;
-  border-right: 1px solid #7a7a7a;;
+  border-right: $border;
   border-top: 0;
   border-bottom: 0;
-  background: $highlightcolor;
 }
 
+/* верх слева */
 .general__grid > .general__label:nth-child(1) {
   border-top: $border;
   border-top-left-radius: 10px;
@@ -44,20 +48,29 @@ $highlightcolor: #ffffff;
   position: relative;
   display: flex;
   align-items: center;
-  padding-right: 8px;
+  padding: 0 16px;
+
+  background: $highlightcolor;
+
+  border-right: $border;
+  border-left: $border;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.general__grid > div:not(.general__label):nth-child(2) {
+  border-top: $border;
+  border-top-right-radius: 10px;
+}
+
+.general__grid > div:not(.general__label):last-child {
+  border-bottom: $border;
+  border-bottom-right-radius: 0px;
 }
 
 .general__value {
   color: #1a1a1a;
   font-weight: 500;
-}
-
-.general__line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10px;
-  border-bottom: 1px solid #7a7a7a;
 }
 
 .general__labels,
