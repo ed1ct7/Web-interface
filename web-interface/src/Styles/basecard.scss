@@ -9,8 +9,10 @@
 }
 
 .base__card {
-  width: 352px;
-  height: 404px;
+  min-width: 352px;
+  min-height: 440px;
+  height: auto;
+  width: auto;
   background: #f7f9fa;
   border: 1px solid #243244;
   border-radius: 16px;

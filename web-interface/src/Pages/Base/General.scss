@@ -1,39 +1,10 @@
 @use "../../Styles/basecard.scss";
 
-/* Правим карточку под макет */
-.general.base__card {
-  background: #ffffff;      /* белая как на картинке */
-  border: 1px solid #243244;
-  border-radius: 16px;
-  overflow: visible;        /* чтобы нижние кнопки могли “вылезти” */
-  height: auto;             /* не фиксируй высоту, иначе будет ломать */
-  padding-bottom: 38px;     /* место под “вылезающие” кнопки */
-}
-
-/* Кнопка “Открыть папку” */
-.general__open {
-  display: block;
-  width: 100%;
-  height: 54px;
-  margin: 18px 0 18px;
-  border: 0;
-  border-radius: 12px;
-  background: #005aaa;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.general__open:hover { background: #003f76; }
-.general__open:active { background: #001629; }
-
-/* 2 колонки: кнопки слева, линии справа */
 .general__grid {
   display: grid;
   grid-template-columns: 120px 1fr;
   column-gap: 22px;
-  row-gap: 18px;
+  row-gap: 10px;
   padding: 0 6px;
 }
 
@@ -41,13 +12,18 @@
 .general__values {
   display: grid;
   row-gap: 18px;
+  border: #1a1a1a solid 1px;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.general__textboxes {
+  display: grid;
+  row-gap: 18px;
 }
 
 .general__label {
   height: 40px;
-  border-radius: 10px;
-  border: 1px solid #2f7ad1;
-  background: #ffffff;
   color: #2f2f2f;
   font-weight: 700;
   font-size: 16px;
@@ -55,30 +31,46 @@
   text-align: center;
 }
 
+.general__icon {
+  width: 56px;
+  height: 56px;
+}
+
+.general__labelData {
+  position: relative;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.general__row {
+  display: flex;
+  flex-direction: column;
+}
+
 .general__line {
-  height: 46px;
   border-bottom: 2px solid #7a7a7a;
 }
 
-/* Нижние кнопки “вылезают” за карточку */
 .general__actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 18px;
-  padding: 0 18px;
-
-  margin-top: 22px;
-  margin-bottom: 0px; /* вытаскиваем кнопки вниз за границу карточки */
+  border: #1a1a1a solid 1px;
+  border-radius: 10px;
+  background: #f6f8fb;
+  margin-top: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .general__actionBtn {
-  height: auto;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
-  border-radius: 12px;
-  background: #005aaa;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
+  border-radius: 10px;
+  background-color: #f7f9fa;
   cursor: pointer;
 }
 
